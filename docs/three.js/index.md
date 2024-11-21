@@ -21,8 +21,6 @@ camera.lookAt(0, 0, 0)
 ```
 
 <Image name="1.webp"/>
-<img src="/assets/images/1.webp"/>
-
 ## light 光源
 
 ```js

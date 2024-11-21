@@ -6,9 +6,9 @@ export default defineConfig({
 	lang: "zh-cn",
 	title: "个人博客",
 	description: "记录自己的学习&生活",
-	head: [["link", { rel: "icon", href: "/assets/icons/icon.svg" }]],
+	head: [["link", { rel: "icon", href: "/icons/icon.svg" }]],
 	themeConfig: {
-		logo: "/assets/icons/icon.svg",
+		logo: "/icons/icon.svg",
 		docFooter: {
 			prev: "上一篇",
 			next: "下一篇",

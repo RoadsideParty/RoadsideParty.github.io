@@ -5,8 +5,7 @@ const props = defineProps<{
 }>()
 const { name } = props
 
-const src = "/assets/images/" + name
-
+const src = `/images/${name}`
 function preview() {
 	window.open(src, "_blank")
 }
@@ -14,7 +13,7 @@ function preview() {
 
 <template>
 	<div @click="preview">
-		<img :src alt="" />
+		<img :src alt="加载失败" />
 	</div>
 </template>
 
