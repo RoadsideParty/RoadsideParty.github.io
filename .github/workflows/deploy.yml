@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: "20" # 可以根据你的项目需求选择 Node.js 版本
 
+      - name: Install pnpm
+        run: npm install -g pnpm # 安装 pnpm
+        
       - name: Install dependencies
         run: pnpm install # 或者 yarn install，取决于你的项目依赖管理工具
 
