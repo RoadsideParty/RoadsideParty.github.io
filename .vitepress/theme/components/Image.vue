@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
 	name: string
-	size?: number[]
+	size?: string[]
 }>()
 const { name, size } = props
 
@@ -11,14 +11,18 @@ function preview() {
 }
 
 const style = {
-	width: size ? size[0] + "px" : "",
-	height: size ? size[1] + "px" : "",
+	width: size ? size[0] : "",
+	height: size ? size[1] : "",
 }
 </script>
 
 <template>
 	<div @click="preview" :style>
-		<img :src alt="加载失败" style="object-fit: cover" />
+		<img
+			:src
+			alt="加载失败"
+			style="object-fit: cover; width: 100%; height: 100%"
+		/>
 	</div>
 </template>
 

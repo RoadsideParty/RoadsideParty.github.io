@@ -17,6 +17,7 @@ export default defineConfig({
 		sidebarMenuLabel: "菜单",
 		outline: {
 			label: "导航",
+			level: "deep",
 		},
 		lastUpdated: {
 			text: "更新时间",
