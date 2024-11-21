@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+# 触发条件，推送到 main 或 master 分支时触发
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20" # 可以根据你的项目需求选择 Node.js 版本
+
+      - name: Install dependencies
+        run: pnpm install # 或者 yarn install，取决于你的项目依赖管理工具
+
+      - name: Build project
+        run: pnpm build # 如果你是使用 React、Vue 或 Angular，通常都会有一个 build 脚本
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: blog # 发布到 gh-pages 分支
+          folder: dist # 这里的 build 文件夹是构建输出目录，React 默认是 `build`，Vue 是 `dist`，需要根据实际情况调整
