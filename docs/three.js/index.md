@@ -20,7 +20,7 @@ camera.position.set(0, 0, 5000)
 camera.lookAt(0, 0, 0)
 ```
 
-<Image name="1.webp"/>
+<Image name="1.webp" />
 ## light 光源
 
 ```js
