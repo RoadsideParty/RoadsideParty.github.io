@@ -13,6 +13,7 @@ function preview() {
 const style = {
 	width: size ? size[0] : "",
 	height: size ? size[1] : "",
+	cursor: "pointer",
 }
 </script>
 
