@@ -49,6 +49,7 @@ export default defineConfig({
 		sidebar: [
 			{ text: "diary", link: "/diary/" },
 			{ text: "three.js", link: "/three.js/" },
+			{ text: "RegExp", link: "/RegExp/" },
 		],
 	},
 	lastUpdated: true,
