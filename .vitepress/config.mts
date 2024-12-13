@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress"
 // https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
 	lang: "zh-cn",
-	title: "个人博客",
+	title: "BLOG",
 	description: "记录自己的学习&生活",
 	head: [["link", { rel: "icon", href: "/icons/icon.svg" }]],
 	themeConfig: {
@@ -50,6 +50,7 @@ export default defineConfig({
 			{ text: "diary", link: "/diary/" },
 			{ text: "three.js", link: "/three.js/" },
 			{ text: "RegExp", link: "/RegExp/" },
+			{ text: "unocss", link: "/unocss/" },
 		],
 	},
 	lastUpdated: true,
