@@ -12,29 +12,30 @@ const dir = {
 	r: "right",
 }
 
-function getValue(str: string) {
+function getValue(str: string | undefined) {
+	if (str === undefined) return ""
 	return str.startsWith("[") ? str.slice(1, -1) : str
 }
 
 export default defineConfig({
 	transformers: [transformerVariantGroup()],
 	rules: [
-		// flex-center-center flex-[self-end]-[flex-end]
+		// flex-center-center f-[self-end]-[flex-end]...
 		[
-			/^flex-(?:([a-z]+|\[.+\]))-(?:([a-z]+|\[.+\]))$/,
+			/^(?:flex|f)-(?:([a-z]+|\[.+\]))?-(?:([a-z]+|\[.+\]))?$/,
 			(match) => {
 				const value1 = getValue(match[1])
 				const value2 = getValue(match[2])
 				return {
 					display: "flex",
-					"align-items": value1,
-					"justify-content": value2,
+					"align-items": value1 || "normal",
+					"justify-content": value2 || "normal",
 				}
 			},
 		],
-		// b-1px-solid-black b-b-1px-solid-black
+		// b-1px-solid-black b-b-1px-solid-black...
 		[
-			/^(?:b|border)(?:-(t|b|l|r))?-(.+)-([a-z]+)-(.+)$/,
+			/^(?:border|b)(?:-(t|b|l|r))?-(.+)-([a-z]+)-(.+)$/,
 			(match) => {
 				const value1 = match[1]
 				const value2 = match[2]
@@ -48,7 +49,6 @@ export default defineConfig({
 		],
 	],
 	theme: {
-		// 动画写法
 		animation: {
 			keyframes: {
 				test: `{
