@@ -34,7 +34,7 @@ export default defineConfig({
 		],
 		// b-1px-solid-black b-b-1px-solid-black
 		[
-			/^b(?:-(t|b|l|r))?-(.+)-([a-z]+)-(.+)$/,
+			/^(?:b|border)(?:-(t|b|l|r))?-(.+)-([a-z]+)-(.+)$/,
 			(match) => {
 				const value1 = match[1]
 				const value2 = match[2]
@@ -47,5 +47,16 @@ export default defineConfig({
 			},
 		],
 	],
+	theme: {
+		// 动画写法
+		animation: {
+			keyframes: {
+				test: `{
+					0% {transform:scale(1);opacity:1}
+					100% {transform:scale(2);opacity:0}
+				}`,
+			},
+		},
+	},
 })
 ```
