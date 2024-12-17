@@ -20,16 +20,24 @@ function getValue(str: string | undefined) {
 export default defineConfig({
 	transformers: [transformerVariantGroup()],
 	rules: [
-		// flex-center-center f-[self-end]-[flex-end]...
+		// f-c-c f-fe-fs...
 		[
-			/^(?:flex|f)-(?:([a-z]+|\[.+\]))?-(?:([a-z]+|\[.+\]))?$/,
+			/^(?:flex|f)-(c|fe|fs)?-(c|fe|fs|sa|sb|se)?$/,
 			(match) => {
+				const flexMap = {
+					c: "center",
+					fe: "flex-end",
+					fs: "flex-start",
+					sa: "space-around",
+					sb: "space-between",
+					se: "space-evenly",
+				}
 				const value1 = getValue(match[1])
 				const value2 = getValue(match[2])
 				return {
 					display: "flex",
-					"align-items": value1 || "normal",
-					"justify-content": value2 || "normal",
+					"align-items": flexMap[value1] || "normal",
+					"justify-content": flexMap[value2] || "normal",
 				}
 			},
 		],
