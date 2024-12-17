@@ -5,7 +5,7 @@
 ```js
 import { defineConfig, transformerVariantGroup } from "unocss"
 
-const dir = {
+const dirMap = {
 	t: "top",
 	b: "bottom",
 	l: "left",
@@ -22,9 +22,10 @@ export default defineConfig({
 	rules: [
 		// f-c-c f-fe-fs...
 		[
-			/^(?:flex|f)-(c|fe|fs)?-(c|fe|fs|sa|sb|se)?$/,
+			/^(?:flex|f)-(n|c|fe|fs)-(n|c|fe|fs|sa|sb|se)$/,
 			(match) => {
 				const flexMap = {
+					n: "normal",
 					c: "center",
 					fe: "flex-end",
 					fs: "flex-start",
@@ -36,8 +37,8 @@ export default defineConfig({
 				const value2 = getValue(match[2])
 				return {
 					display: "flex",
-					"align-items": flexMap[value1] || "normal",
-					"justify-content": flexMap[value2] || "normal",
+					"align-items": flexMap[value1],
+					"justify-content": flexMap[value2],
 				}
 			},
 		],
@@ -50,7 +51,7 @@ export default defineConfig({
 				const value3 = match[3]
 				const value4 = match[4]
 				if (value1) {
-					return { [`border-${dir[value1]}`]: `${value2} ${value3} ${value4}` }
+					return { [`border-${dirMap[value1]}`]: `${value2} ${value3} ${value4}` }
 				}
 				return { border: `${value2} ${value3} ${value4}` }
 			},
