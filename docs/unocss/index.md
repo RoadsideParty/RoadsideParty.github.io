@@ -1,6 +1,6 @@
 # unocss
 
-记录自己的 unocss 配置
+## unocss 配置
 
 ```js
 import { defineConfig, transformerVariantGroup } from "unocss"
@@ -51,21 +51,28 @@ export default defineConfig({
 				const value3 = match[3]
 				const value4 = match[4]
 				if (value1) {
-					return { [`border-${dirMap[value1]}`]: `${value2} ${value3} ${value4}` }
+					return {
+						[`border-${dirMap[value1]}`]: `${value2} ${value3} ${value4}`,
+					}
 				}
 				return { border: `${value2} ${value3} ${value4}` }
 			},
 		],
 	],
-	theme: {
-		animation: {
-			keyframes: {
-				test: `{
-					0% {transform:scale(1);opacity:1}
-					100% {transform:scale(2);opacity:0}
-				}`,
-			},
+})
+```
+
+## 动画写法
+
+```js
+theme: {
+	animation: {
+		keyframes: {
+			test: `{
+				0% {transform:scale(1);opacity:1}
+				100% {transform:scale(2);opacity:0}
+			}`,
 		},
 	},
-})
+},
 ```
