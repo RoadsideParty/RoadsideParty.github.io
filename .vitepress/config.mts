@@ -51,6 +51,7 @@ export default defineConfig({
 			{ text: "three.js", link: "/three.js/" },
 			{ text: "RegExp", link: "/RegExp/" },
 			{ text: "unocss", link: "/unocss/" },
+			{ text: "other", link: "/other/" },
 		],
 	},
 	lastUpdated: true,
