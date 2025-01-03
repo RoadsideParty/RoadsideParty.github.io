@@ -46,7 +46,3 @@ renderer.setSize(width, height)
 renderer.render(scene, camera)
 document.querySelector("#my-three").appendChild(renderer.domElement)
 ```
-
-## 更多
-
-...
