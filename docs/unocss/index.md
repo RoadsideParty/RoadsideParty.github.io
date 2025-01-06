@@ -5,11 +5,18 @@
 ```js
 import { defineConfig, transformerVariantGroup } from "unocss"
 
-const dirMap = {
+const dir = {
 	t: "top",
 	b: "bottom",
 	l: "left",
 	r: "right",
+}
+
+const margin = {
+	p: "padding",
+	padding: "padding",
+	m: "margin",
+	margin: "margin",
 }
 
 function getValue(str: string | undefined) {
@@ -52,10 +59,19 @@ export default defineConfig({
 				const value4 = match[4]
 				if (value1) {
 					return {
-						[`border-${dirMap[value1]}`]: `${value2} ${value3} ${value4}`,
+						[`border-${dir[value1]}`]: `${value2} ${value3} ${value4}`,
 					}
 				}
 				return { border: `${value2} ${value3} ${value4}` }
+			},
+		],
+		// p-10px-20px m-10px-20px...
+		[
+			/^(padding|p|margin|m)(-.+){1,4}$/,
+			(match) => {
+				const value1 = match[1]
+				const value2 = match[2]
+				return { [margin[value1]]: `${value2.slice(1).replace(/-/g, " ")}` }
 			},
 		],
 	],
