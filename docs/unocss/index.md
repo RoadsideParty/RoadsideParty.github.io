@@ -67,7 +67,7 @@ export default defineConfig({
 		],
 		// p-10px-20px m-10px-20px...
 		[
-			/^(padding|p|margin|m)(-.+){1,4}$/,
+			/^(padding|p|margin|m)((?:-[^-]+){1,4})$/,
 			(match) => {
 				const value1 = match[1]
 				const value2 = match[2]
