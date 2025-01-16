@@ -16,13 +16,13 @@
 
 ### 设置代理
 
-如果代理端口是:7879
+如果代理端口是:7897
 
 ```bash
 // 开启代理
-git config [--global] http.proxy 127.0.0.1:7879
-git config [--global] https.proxy 127.0.0.1:7879
+git config [--global] http.proxy 127.0.0.1:7897
+git config [--global] https.proxy 127.0.0.1:7897
 // 关闭代理
-git config [--global] --unset http.proxy 127.0.0.1:7879
-git config [--global] --unset https.proxy 127.0.0.1:7879
+git config [--global] --unset http.proxy 127.0.0.1:7897
+git config [--global] --unset https.proxy 127.0.0.1:7897
 ```
