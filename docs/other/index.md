@@ -27,6 +27,27 @@ git config [--global] --unset http.proxy 127.0.0.1:7897
 git config [--global] --unset https.proxy 127.0.0.1:7897
 ```
 
+## go
+
+### gin
+
+#### 自定义校验
+
+```go
+// 定义
+if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
+  v.RegisterValidation("customize-tag", func(fl validator.FieldLevel) bool {
+    fmt.Println(fl.Field().String())
+    return true
+  }, true)
+}
+// 使用
+type User struct {
+	Name string `form:"name" binding:"customize-tag"`
+	Age  int    `form:"age" binding:"gte=18"`
+}
+```
+
 ## 关于刷机
 
 ### 常规流程
