@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress"
+import UnoCSS from "unocss/vite"
 
 // https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
@@ -48,6 +49,7 @@ export default defineConfig({
 		},
 		sidebar: [
 			{ text: "diary", link: "/diary/" },
+			{ text: "price of day", link: "/price-of-Day/" },
 			{ text: "three.js", link: "/three.js/" },
 			{ text: "RegExp", link: "/RegExp/" },
 			{ text: "unocss", link: "/unocss/" },
@@ -58,4 +60,7 @@ export default defineConfig({
 	lastUpdated: true,
 	srcDir: "./docs",
 	outDir: "./dist",
+	vite: {
+		plugins: [UnoCSS()],
+	},
 })

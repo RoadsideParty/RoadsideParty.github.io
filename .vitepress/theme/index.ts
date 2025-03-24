@@ -1,8 +1,8 @@
 import { h } from "vue"
 import type { Theme } from "vitepress"
 import DefaultTheme from "vitepress/theme"
-import Image from "./components/Image.vue"
-import NotFound from "./components/NotFound.vue"
+import { NotFound, Image, GoodsPriceOfDay } from "./components"
+import "virtual:uno.css"
 
 export default {
 	extends: DefaultTheme,
@@ -12,6 +12,6 @@ export default {
 		})
 	},
 	enhanceApp({ app }) {
-		app.component("Image", Image)
+		app.component("Image", Image).component("GoodsPriceOfDay", GoodsPriceOfDay)
 	},
 } satisfies Theme
