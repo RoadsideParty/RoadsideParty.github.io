@@ -7,9 +7,9 @@
 		<div class="text-center">
 			<a
 				href="/"
-				class="text-14px b-1px b-solid b-black px-16px py-8px rounded-20px inline-block"
+				class="text-14px b-1px b-solid px-16px py-8px rounded-20px inline-block"
 			>
-				Back Hsome
+				Back Home
 			</a>
 		</div>
 	</div>
