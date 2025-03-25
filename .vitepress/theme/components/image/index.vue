@@ -19,11 +19,7 @@ const style = {
 
 <template>
 	<div @click="preview" :style>
-		<img
-			:src
-			alt="加载失败"
-			style="object-fit: cover; width: 100%; height: 100%"
-		/>
+		<img :src alt="加载失败" class="object-cover size-full" />
 	</div>
 </template>
 

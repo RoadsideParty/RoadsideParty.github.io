@@ -1,5 +1,4 @@
-import NotFound from "./NotFound.vue"
-import Image from "./Image.vue"
-import GoodsPriceOfDay from "./GoodsPriceOfDay.vue"
+import NotFound from "./notFound/index.vue"
+import Image from "./image/index.vue"
 
-export { Image, NotFound, GoodsPriceOfDay }
+export { Image, NotFound }

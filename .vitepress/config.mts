@@ -62,5 +62,10 @@ export default defineConfig({
 	outDir: "./dist",
 	vite: {
 		plugins: [UnoCSS()],
+		resolve: {
+			alias: {
+				"@": __dirname,
+			},
+		},
 	},
 })

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import dayjs from "dayjs"
-import { division } from "../utils"
+import { division } from "../../utils"
 
 const props = defineProps<{
 	date: string
