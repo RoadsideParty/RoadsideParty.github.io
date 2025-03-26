@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import dayjs from "dayjs"
-import { division } from "../../utils"
+import { division } from "@/theme/utils"
 
 const props = defineProps<{
 	date: string
@@ -26,7 +26,9 @@ const unitPrice = computed(() => {
 		<div class="text-white text-20px font-bold mb-10px">{{ name }}</div>
 		<div class="flex justify-between lt-sm:(flex-col)">
 			<div class="text-14px text-white">
-				<span class="mr-10px">购买日期：{{ date }} </span>
+				<span class="mr-10px min-w-150px inline-block">
+					购买日期：{{ date }}
+				</span>
 				<span>总价：{{ price }}</span>
 			</div>
 			<div class="text-14px text-white">

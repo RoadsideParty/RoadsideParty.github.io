@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop":true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny":false,
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./.vitepress/*"]
+    },
+  },
+  "include": ["./.vitepress/**/*.ts", "./.vitepress/**/*.vue"],
+}
