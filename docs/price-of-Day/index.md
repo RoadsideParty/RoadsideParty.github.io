@@ -9,4 +9,4 @@ const goodsList=[
 
 # price of Day
 
-<GoodsPriceOfDay v-for="item in goodsList" :key="item.name" :name="item.name" :date="item.date" :price="item.price" class="mt-20px"/>
+<GoodsPriceOfDay :goodsList class="mt-20px"/>
