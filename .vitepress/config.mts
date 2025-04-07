@@ -54,6 +54,7 @@ export default defineConfig({
 			{ text: "RegExp", link: "/RegExp/" },
 			{ text: "unocss", link: "/unocss/" },
 			{ text: "vite", link: "/vite/" },
+			{ text: "vue", link: "/vue/" },
 			{ text: "other", link: "/other/" },
 		],
 	},

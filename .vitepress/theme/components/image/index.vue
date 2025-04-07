@@ -11,9 +11,12 @@ function preview() {
 </script>
 
 <template>
-	<div @click="preview" class="cursor-pointer">
-		<img :src alt="加载失败" class="object-cover size-full" />
-	</div>
+	<img
+		:src
+		alt="加载失败"
+		@click="preview"
+		class="cursor-pointer object-cover"
+	/>
 </template>
 
 <style scoped></style>
