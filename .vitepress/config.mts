@@ -55,6 +55,7 @@ export default defineConfig({
 			{ text: "unocss", link: "/unocss/" },
 			{ text: "vite", link: "/vite/" },
 			{ text: "vue", link: "/vue/" },
+			{ text: "css", link: "/css/" },
 			{ text: "other", link: "/other/" },
 		],
 	},
