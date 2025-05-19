@@ -1,6 +1,6 @@
 # css
 
-## 选择器
+## css selector
 
 ### :nth-child
 
