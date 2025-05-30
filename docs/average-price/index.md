@@ -8,6 +8,6 @@ const goodsList=[
 ]
 </script>
 
-# price of Day
+# average price
 
 <GoodsPriceOfDay :goodsList class="mt-20px"/>

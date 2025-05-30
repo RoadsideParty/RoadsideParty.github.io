@@ -48,8 +48,8 @@ export default defineConfig({
 			},
 		},
 		sidebar: [
-			{ text: "diary", link: "/diary/" },
-			{ text: "price of day", link: "/price-of-Day/" },
+			// { text: "diary", link: "/diary/" },
+			{ text: "average price", link: "/average-price/" },
 			{ text: "three.js", link: "/three.js/" },
 			{ text: "RegExp", link: "/RegExp/" },
 			{ text: "unocss", link: "/unocss/" },
